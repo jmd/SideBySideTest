@@ -68,7 +68,9 @@
       <Command>if not exist "$(OutDir)Foo\" mkdir $(OutDir)Foo 
 if not exist "$(OutDir)Bar\" mkdir $(OutDir)Bar
 copy /Y $(TargetPath) $(OutDir)Foo
-copy /Y $(TargetPath) $(OutDir)Bar</Command>
+move /Y $(TargetPath) $(OutDir)Bar
+copy /Y $(ProjectDir)Foo.manifest $(OutDir)Foo
+copy /Y $(ProjectDir)Bar.manifest $(OutDir)Bar</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -92,7 +94,9 @@ copy /Y $(TargetPath) $(OutDir)Bar</Command>
       <Command>if not exist "$(OutDir)Foo\" mkdir $(OutDir)Foo 
 if not exist "$(OutDir)Bar\" mkdir $(OutDir)Bar
 copy /Y $(TargetPath) $(OutDir)Foo
-copy /Y $(TargetPath) $(OutDir)Bar</Command>
+copy /Y $(TargetPath) $(OutDir)Bar
+copy /Y $(ProjectDir)Foo.manifest $(OutDir)Foo
+copy /Y $(ProjectDir)Bar.manifest $(OutDir)Bar</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
