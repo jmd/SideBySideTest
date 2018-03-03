@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SideBySideTest", "SideBySideTest\SideBySideTest.vcxproj", "{DC4C2BFF-8C71-4303-91B5-9FB27C83CD6E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B44DE024-60CC-481F-A65F-BF4197DBDF32} = {B44DE024-60CC-481F-A65F-BF4197DBDF32}
+		{50E61876-0C21-435D-A424-D6E06A60424D} = {50E61876-0C21-435D-A424-D6E06A60424D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SharedDll", "SharedDll\SharedDll.vcxproj", "{1718E624-BAAE-4C0C-889D-30C662AED90E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FooContext", "FooContext\FooContext.vcxproj", "{B44DE024-60CC-481F-A65F-BF4197DBDF32}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1718E624-BAAE-4C0C-889D-30C662AED90E} = {1718E624-BAAE-4C0C-889D-30C662AED90E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BarContext", "BarContext\BarContext.vcxproj", "{50E61876-0C21-435D-A424-D6E06A60424D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1718E624-BAAE-4C0C-889D-30C662AED90E} = {1718E624-BAAE-4C0C-889D-30C662AED90E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC4C2BFF-8C71-4303-91B5-9FB27C83CD6E}.Debug|x64.ActiveCfg = Debug|x64
+		{DC4C2BFF-8C71-4303-91B5-9FB27C83CD6E}.Debug|x64.Build.0 = Debug|x64
+		{DC4C2BFF-8C71-4303-91B5-9FB27C83CD6E}.Release|x64.ActiveCfg = Release|x64
+		{DC4C2BFF-8C71-4303-91B5-9FB27C83CD6E}.Release|x64.Build.0 = Release|x64
+		{1718E624-BAAE-4C0C-889D-30C662AED90E}.Debug|x64.ActiveCfg = Debug|x64
+		{1718E624-BAAE-4C0C-889D-30C662AED90E}.Debug|x64.Build.0 = Debug|x64
+		{1718E624-BAAE-4C0C-889D-30C662AED90E}.Release|x64.ActiveCfg = Release|x64
+		{1718E624-BAAE-4C0C-889D-30C662AED90E}.Release|x64.Build.0 = Release|x64
+		{B44DE024-60CC-481F-A65F-BF4197DBDF32}.Debug|x64.ActiveCfg = Debug|x64
+		{B44DE024-60CC-481F-A65F-BF4197DBDF32}.Debug|x64.Build.0 = Debug|x64
+		{B44DE024-60CC-481F-A65F-BF4197DBDF32}.Release|x64.ActiveCfg = Release|x64
+		{B44DE024-60CC-481F-A65F-BF4197DBDF32}.Release|x64.Build.0 = Release|x64
+		{50E61876-0C21-435D-A424-D6E06A60424D}.Debug|x64.ActiveCfg = Debug|x64
+		{50E61876-0C21-435D-A424-D6E06A60424D}.Debug|x64.Build.0 = Debug|x64
+		{50E61876-0C21-435D-A424-D6E06A60424D}.Release|x64.ActiveCfg = Release|x64
+		{50E61876-0C21-435D-A424-D6E06A60424D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51EDBE27-B686-4E26-A2BB-BC5D66654B09}
+	EndGlobalSection
+EndGlobal
